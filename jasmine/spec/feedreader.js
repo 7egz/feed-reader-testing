@@ -105,13 +105,13 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-           let initialFeed;
+        let initialFeed;
         let newFeed;
 
         beforeEach(function(done){
             loadFeed(0, function () {
                 initialFeed = $('.feed').html();
-                done();
+                loadFeed(1, done);
             });
         });
 
